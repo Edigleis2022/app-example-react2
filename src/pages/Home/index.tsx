@@ -1,5 +1,6 @@
 import { AddressBook } from "phosphor-react";
-import {ImagemSquare} from "phosphor-react";
+import {ImageSquare} from "phosphor-react";
+import { Menu } from "../../components/Menu"
 import { Button } from "../../components/Button";
 import { Title } from "../../components/Title";
 import { MenuItem } from "../../components/MenuItem";
@@ -15,8 +16,8 @@ export function Home() {
                 <MenuItem icon={<AddressBook/>} text="Agenda"/>
 
                 <Link to='/gallery'>
-                <MenuItem icon={<ImagemSquare/>} text="Galeria"/>
-                <Link/>
+                <MenuItem icon={<ImageSquare/>} text="Galeria"/>
+                </Link>
                 </Menu>
             </main>
         </>

@@ -4,18 +4,18 @@ import { MenuItem } from './components/MenuItem'
 import { NavBarMenu } from './components/NavBarMenu'
 import { Home } from './pages/Home'
 import { StateExample } from './pages/StateExample'
-import {BrowerRouter,Routes,Route} from 'react-rout-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
 function App() {
   return (
     <div id="App">
-     <BrowerRouter>
+     <BrowserRouter>
       <Routes>
-        <Route paht="/" element={<Home/>}/>
-        <Route paht="/gallery" element={<Gallery/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/gallery" element={<Gallery/>}/>
       </Routes>
-     </BrowerRouter>
+     </BrowserRouter>
        
     </div>
   )
