@@ -5,7 +5,9 @@ import { NavBarMenu } from './components/NavBarMenu';
 import { Home } from './pages/Home';
 import { StateExample } from './pages/StateExample';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-//import { Agendas } from './components/Agendas'
+import { Agendas } from './components/Agendas';
+import { AgendaLista } from './services/api';
+
 
 
 function App() {
@@ -13,7 +15,7 @@ function App() {
     <div id="App">
      <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Agendas/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
       </Routes>
      </BrowserRouter>

@@ -16,7 +16,7 @@ export function Home() {
                 <MenuItem icon={<AddressBook/>} text="Agenda"/>
 
                 <Link to='/gallery'>
-                <MenuItem icon={<ImageSquare/>} text="Galeria"/>444444444444444
+                <MenuItem icon={<ImageSquare/>} text="Galeria"/>
                 </Link>
                 </Menu>
             </main>

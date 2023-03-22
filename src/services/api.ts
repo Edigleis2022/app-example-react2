@@ -1,6 +1,17 @@
 import { useState } from 'react';
-import { Agendas} from '../components/Agendas/index'
-function AgendaLista() {
+//import { Agendas} from '../components/Agendas/index'
+import { Axios } from 'axios';
+
+
+const popular = Axios.create({
+    baseUrl:'https://randomuser.me/api/',
+    dataType: 'json',
+    success: function(data) {
+      console.log(data);
+})
+
+
+export function AgendaLista() {
 
     return (
         <>
