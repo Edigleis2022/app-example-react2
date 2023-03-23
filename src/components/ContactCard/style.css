@@ -1,0 +1,12 @@
+.contactCard{
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.contactCard img {
+    padding: 10px;
+    border-radius: 5px;
+}

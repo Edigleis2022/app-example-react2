@@ -1,32 +1,13 @@
-import { useState } from 'react';
-//import { Agendas} from '../components/Agendas/index'
-import { Axios } from 'axios';
+
+import axios from 'axios'
+
+const popular = axios.create({
+    baseURL: 'https://randomuser.me/api/',
+    timeout: 1000,
+});
 
 
-const popular = Axios.create({
-    baseUrl:'https://randomuser.me/api/',
-    dataType: 'json',
-    success: function(data) {
-      console.log(data);
-})
-
-
-export function AgendaLista() {
-
-    return (
-        <>
-        <header>
-        <Title text= 'Agenda de Contatos' />
-        </header>
-        < main >
-            <ContactList>
-                <ContactCard/>
-                <ContactCard/>
-                <ContactCard/>
-                <ContactCard/>
-            <ContactList>
-        </main>
-
-        < />
-  );
+export async function getContacts() {
+    const contacts = await popular.get('?results=10&nat=br')
+    return contacts.data.results
 }
