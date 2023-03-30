@@ -42,7 +42,6 @@ main{
   width: 100%;
  
 }
-/*
 form{
   display: flex;
   flex-direction: column;
@@ -58,4 +57,4 @@ form input{
   border-radius: 8px;
   border: 0;
   outline: none;
-}*/
+}

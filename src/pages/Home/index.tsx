@@ -1,27 +1,21 @@
 import { AddressBook } from "phosphor-react";
-import {ImageSquare} from "phosphor-react";
+import { ImageSquare } from "phosphor-react";
 import { Menu } from "../../components/Menu"
-import { Button } from "../../components/Button";
-import { Title } from "../../components/Title";
 import { MenuItem } from "../../components/MenuItem";
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { BaseLayout } from "../../Layout/BaseLayout";
+
+
 export function Home() {
     return (
-        <>
-            <header>
-                <Title text='Bem Vindo' />
-            </header>
-            <main>
-                <Menu>
-                <MenuItem icon={<AddressBook/>} text="Agenda"/>
+        <BaseLayout appBarTitle = "Dashboard">
+            <Menu>
+                <MenuItem icon={<AddressBook size={24} />} text="Agenda" />
 
                 <Link to='/gallery'>
-                <MenuItem icon={<ImageSquare/>} text="Galeria"/>
+                    <MenuItem icon={<ImageSquare size={24} />} text="Galeria" />
                 </Link>
-                </Menu>
-            </main>
-        </>
+            </Menu>
+        </BaseLayout>
     )
-
-
 }

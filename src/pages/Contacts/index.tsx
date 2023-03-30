@@ -1,12 +1,21 @@
-import './style.css'
 import { useEffect, useState } from "react";
-import { Input } from '../../components/Input';
 import { ContactCard } from "../../components/ContactCard";
 import { ContactList } from "../../components/ContactList";
 import { Title } from "../../components/Title";
 import { getContacts } from "../../services/api";
-import { Contact } from "../../Types";
+import { Contacts } from "../../type"
 
+type Contact = {
+    name: {
+        firts: string,
+        last: string,
+
+    },
+    email: string,
+    picture: {
+        medium: string
+    }
+}
 
 export function Contacts() {
     const [search, setSearch] = useState('')
@@ -26,11 +35,10 @@ export function Contacts() {
                 <Title text='Agenda de Contatos' />
             </header>
             <main>
-                <Input placeholder='Localizar' type='text' />
                 <ContactList>
                     {
-                        contacts.map(contact => {
-                            return <ContactCard contactdata={contact}/>
+                        contacts.map(contact=>{
+                            return <ContactCard contactData={contact}/>
                         })
                     }
                 </ContactList>
