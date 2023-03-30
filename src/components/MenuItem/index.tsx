@@ -1,4 +1,4 @@
-import { User } from 'phosphor-react'
+import { Button } from '@mui/material'
 import './style.css'
 
 type MenuItemProps = {
@@ -8,10 +8,7 @@ type MenuItemProps = {
 export function MenuItem({icon, text}: MenuItemProps){
     return(
         <>
-            <a href="#" className="menuItem">
-               {icon}
-               {text}
-           </a>
+           <Button variant="contained" >{icon}{text}</Button>
         </>
     )
 }
