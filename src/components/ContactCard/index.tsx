@@ -1,23 +1,31 @@
 import './style.css'
+import { Contact } from '../../Types' 
+import { ButtonIU } from '../ButtonUI';
+
 type ContactCardProps = {
-    contactdata:Contact
+    contactdata: Contact,
 }
 /*export functionContactCard({contactdata}:ContactCardProps){
     const
 }*/
 
-export function ContactCard(){
-    return(
-        <>
-            <div className="contactCard">
-                <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="" />
+export function ContactCard({ contactdata }: ContactCardProps) {
+    const { name, email, picture } = contactdata;
+    return (
+      <>
+        <section className="contactCard">
+          <div>
+            <img src={picture.medium} alt="" />
+          </div>
+          <div className='dadosContatos'>
+            <div>
+              <p>{name.firts}</p>
+              <p>{email}</p>
+              {/* <Button text="Detalhes" type='primary' /> */}
+              <ButtonIU text="Detalhes" />
             </div>
-            <div className="contacInformations">
-                <h2> Phyliis Shellby</h2>
-                <p>
-                    Shellby.Phillis@example.com
-                </p>
-            </div>
-        </>
+          </div>
+        </section>
+      </>
     )
-}
+  }

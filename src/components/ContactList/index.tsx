@@ -1,3 +1,4 @@
+import { Box } from '@mui/system'
 import './style.css'
 type ContactListProps = {
     children:React.ReactNode
@@ -6,9 +7,11 @@ type ContactListProps = {
 export function ContactList({children}:ContactListProps){
     return(
         <>
+        <Box>
             <section className="ContactList">
                 {children}
             </section>
+        </Box>
         </>
     )
 }
