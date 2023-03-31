@@ -10,11 +10,17 @@ import { CircularProgress } from "@mui/material";
 
 
 export function Contacts() {
+    console.log('Renderizou o componente')
     const [search, setSearch] = useState('')
     const [isLoading, setIsloading] = useState<Boolean>(false)
     const [contacts, setContacts] = useState<Contact[]>([])
 
+    const filteredContacts = ()=>{
+        
+    }
+
     useEffect(() => {
+        console.log('Executou useEffect')
         async function listContacts() {
             setIsloading(true)
             setContacts(await getContacts())
@@ -33,7 +39,7 @@ export function Contacts() {
                 <ContactList>{
 
                     contacts.map(contact => {
-                        return <ContactCard contactdata={contact} />
+                        return <ContactCard key={contact.login.uuid} contactdata={contact} />
                     })}
 
                 </ContactList>

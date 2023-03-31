@@ -8,7 +8,7 @@ import { BaseLayout } from "../../Layout/BaseLayout";
 
 export function Home() {
     return (
-        <BaseLayout appBarTitle = "Contatos">
+        <BaseLayout appBarTitle = "Lista de Contatos ">
             <Menu>
                 <MenuItem icon={<AddressBook size={24} />} text="Agenda" />
 
