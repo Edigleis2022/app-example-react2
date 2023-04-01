@@ -5,8 +5,8 @@ import { ContactList } from "../../components/ContactList";
 import { getContacts } from "../../services/api";
 import { Contact } from "../../Types";
 import { BaseLayout } from "../../Layout/BaseLayout";
-import TextField from "@mui/material/TextField";
-import { CircularProgress } from "@mui/material";
+
+import { TextField, CircularProgress } from "@mui/material";
 
 
 export function Contacts() {
@@ -29,7 +29,7 @@ export function Contacts() {
         listContacts()
     }, [])
 
-    //test
+    
     return (
         <BaseLayout appBarTitle="Agenda de Contatos">
 
@@ -45,5 +45,5 @@ export function Contacts() {
                 </ContactList>
             )}
         </BaseLayout>
-    )
+    );
 }
