@@ -7,7 +7,7 @@ export function Gallery() {
     function handleClick() {
         setIndex(index + 1);
     }
-    let movie = movies[index]
+    let movie = movies[0]
 
 
     return (

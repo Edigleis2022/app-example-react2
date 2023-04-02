@@ -1,5 +1,8 @@
-import { Box } from '@mui/system'
+
+import List from '@mui/material/List'
 import './style.css'
+
+
 type ContactListProps = {
     children:React.ReactNode
 }
@@ -7,11 +10,11 @@ type ContactListProps = {
 export function ContactList({children}:ContactListProps){
     return(
         <>
-        <Box>
-            <section className="ContactList">
+        <List sx={{
+            }}>
                 {children}
-            </section>
-        </Box>
+            </List>
+
         </>
     )
 }
