@@ -4,17 +4,15 @@ import './style.css'
 
 
 type ContactListProps = {
-    children:React.ReactNode
+    children: React.ReactNode
 }
 
-export function ContactList({children}:ContactListProps){
-    return(
+export function ContactList({ children }: ContactListProps) {
+    return (
         <>
-        <List sx={{
-            }}>
+            <List sx={{}}>
                 {children}
             </List>
-
         </>
     )
 }
