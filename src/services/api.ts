@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const popular = axios.create({
     baseURL: 'https://randomuser.me/api/',
-    timeout: 3000,
+    timeout: 4000,
 });
 
 

@@ -1,7 +1,7 @@
 import { Button } from "../../components/Button";
 import { Title } from "../../components/Title";
 import { SubTitle } from '../../components/SubTitle'
-import { FormLogin } from '../../components/FormLogin'
+
 
 
 export function Login(){
@@ -12,7 +12,7 @@ export function Login(){
             </header>
             <main>
             <SubTitle text='Login' />
-                <FormLogin/>
+                
             </main>
         </>
     )
