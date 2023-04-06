@@ -1,6 +1,5 @@
 import { Button } from "../../components/Button";
 import { Title } from "../../components/Title";
-import { SubTitle } from '../../components/SubTitle'
 
 
 
@@ -8,11 +7,14 @@ export function Login(){
     return(
         <>
              <header>
-                <Title text='Seja Bem Vindo!' />
+                <Title text='Login' />
             </header>
             <main>
-            <SubTitle text='Login' />
-                
+                <form>
+                    <input type="email" name="email" placeholder="E-mail"/>
+                    <input type="password" name="senha" placeholder="Senha"/>
+                    <Button text="Entrar" type="primary" />
+                </form>
             </main>
         </>
     )

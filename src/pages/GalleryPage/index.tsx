@@ -1,12 +1,12 @@
 
 import { BaseLayout } from '../../Layout/BaseLayout';
-import { Contacts } from '../Contacts';
+import { Gallery } from '../../components/Gallery';
 
 
 export function GalleryPage() {
   return (
     <BaseLayout appBarTitle='Galeria'>
-      <Contacts/>
+      <Gallery/>
     </BaseLayout>
   )
 }
