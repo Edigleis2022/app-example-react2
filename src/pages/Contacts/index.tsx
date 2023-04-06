@@ -37,7 +37,7 @@ export function Contacts() {
     return (
         <BaseLayout appBarTitle="Agenda de Contatos">
                                 
-            <TextField variant="outlined" fullWidth label="Pesquisar" onChange={handleChange} />
+            <TextField variant="outlined" fullWidth label="Pesquisar" onChange={handleChange} value={search}/>
             {isLoading ? (<CircularProgress />
             ) : (
                 <ContactList>{
