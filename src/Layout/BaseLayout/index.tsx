@@ -1,6 +1,10 @@
 
 import { AppBar, Toolbar, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
+import { useState } from 'react';
+import { ContactCard } from '../../components/ContactCard';
+import { ContactList } from '../../components/ContactList';
+import { Contact } from '../../Types';
 
 
 
@@ -9,6 +13,8 @@ type BaseLayoutProps = {
   appBarTitle: string;
 }
 export function BaseLayout({ children, appBarTitle }: BaseLayoutProps) {
+
+
   return (
     <>
       <AppBar>
@@ -16,7 +22,7 @@ export function BaseLayout({ children, appBarTitle }: BaseLayoutProps) {
           <Typography variant='h5'>{appBarTitle}</Typography>
         </Toolbar>
       </AppBar>
-      <Box 
+      <Box
         display='flex'
         flexDirection='column'
         alignItems='center'
@@ -24,7 +30,7 @@ export function BaseLayout({ children, appBarTitle }: BaseLayoutProps) {
         mt={10}
         sx={{
           bgcolor: "palette.background.default",
-          width:"100%",
+          width: "100%",
         }}
         minHeight={100}
       >

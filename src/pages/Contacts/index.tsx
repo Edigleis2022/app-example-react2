@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { ContactCard } from "../../components/ContactCard";
 import { ContactList } from "../../components/ContactList";
 import { getContacts } from "../../services/api";
@@ -15,8 +15,12 @@ export function Contacts() {
     const [isLoading, setIsloading] = useState<Boolean>(false)
     const [contacts, setContacts] = useState<Contact[]>([])
 
-    const filteredContacts = ()=>{
-        
+    const handleChange = (event:ChangeEvent<HTMLInputElement>)=>{
+        setSearch(event.target.value)
+    }
+
+    const filteredContacts = (contact:Contact)=>{
+        return contact.name.firts.toLowerCase().includes(search.toLowerCase( ))
     }
 
     useEffect(() => {
@@ -32,13 +36,13 @@ export function Contacts() {
     
     return (
         <BaseLayout appBarTitle="Agenda de Contatos">
-
-            <TextField variant="outlined" fullWidth />
+                                
+            <TextField variant="outlined" fullWidth label="Pesquisar" onChange={handleChange} />
             {isLoading ? (<CircularProgress />
             ) : (
                 <ContactList>{
 
-                    contacts.map(contact => {
+                    contacts.map((contact) => {
                         return <ContactCard key={contact.login.uuid} contactdata={contact} />
                     })}
 

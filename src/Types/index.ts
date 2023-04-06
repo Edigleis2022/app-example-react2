@@ -1,3 +1,5 @@
+import { Axios } from "axios" 
+
 export type Contact = {
     name: {
         firts: string,
