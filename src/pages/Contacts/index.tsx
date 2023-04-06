@@ -41,11 +41,9 @@ export function Contacts() {
             {isLoading ? (<CircularProgress />
             ) : (
                 <ContactList>{
-
                     contacts.map((contact) => {
                         return <ContactCard key={contact.login.uuid} contactdata={contact} />
                     })}
-
                 </ContactList>
             )}
         </BaseLayout>
