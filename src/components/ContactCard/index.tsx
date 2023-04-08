@@ -5,6 +5,7 @@ import { Avatar, Divider, List, ListItem, ListItemAvatar, ListItemText, Typograp
 
 type ContactCardProps = {
     contactdata: Contact,
+    
 }
 /*export functionContactCard({contactdata}:ContactCardProps){
     const

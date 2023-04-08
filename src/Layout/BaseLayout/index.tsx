@@ -1,12 +1,6 @@
 
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, List, Toolbar, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import { useState } from 'react';
-import { ContactCard } from '../../components/ContactCard';
-import { ContactList } from '../../components/ContactList';
-import { Contact } from '../../Types';
-
-
 
 type BaseLayoutProps = {
   children: React.ReactNode;
@@ -34,7 +28,9 @@ export function BaseLayout({ children, appBarTitle }: BaseLayoutProps) {
         }}
         minHeight={100}
       >
-        {children}
+
+       
+
       </Box>
     </>
   );
